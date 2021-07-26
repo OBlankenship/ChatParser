@@ -19,8 +19,9 @@ def chat_parser():
             if player_name in entries_dict:
                 print("Duplicate roll detected for " + player_name + "! Ignoring second roll.")
             else:
-                entries_dict[player_name] = number
+                entries_dict[player_name] = int(number)
     # Prompts (and validates the input) for high or low roll
+    print(entries_dict)
     while True:
         print("High (H) or Low (L) roll?: ")
         high_low = input()
@@ -35,7 +36,7 @@ def chat_parser():
         else:
             print("Invalid Input!")
     # Prints the winner
-    print("Winner: " + winner + " with a roll of " + winning_number)
+    print("Winner: " + winner + " with a roll of " + str(winning_number))
 
 
 # Driver for the chat parser.
